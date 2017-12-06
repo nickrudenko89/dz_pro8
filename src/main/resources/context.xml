@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd ">
+    <bean id="calc" class="Calculator">
+        <property name="plus" ref="plusOperation"/>
+        <property name="minus" ref="minusOperation"/>
+        <property name="multiply" ref="multiplyOperation"/>
+        <property name="divide" ref="divideOperation"/>
+    </bean>
+    <bean id="plusOperation" class="Plus">
+        <property name="x" value="0"/>
+        <property name="y" value="0"/>
+    </bean>
+    <bean id="minusOperation" class="Minus">
+        <property name="x" value="0"/>
+        <property name="y" value="0"/>
+    </bean>
+    <bean id="multiplyOperation" class="Multiply">
+        <property name="x" value="0"/>
+        <property name="y" value="0"/>
+    </bean>
+    <bean id="divideOperation" class="Divide">
+        <property name="x" value="0"/>
+        <property name="y" value="0"/>
+    </bean>
+
+</beans>
