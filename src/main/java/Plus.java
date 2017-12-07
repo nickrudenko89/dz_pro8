@@ -1,4 +1,4 @@
-public class Plus {
+public class Plus implements IOperation {
     private double x;
     private double y;
 

@@ -1,4 +1,4 @@
-public class Minus {
+public class Minus implements IOperation {
     private double x;
     private double y;
 

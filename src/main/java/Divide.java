@@ -1,4 +1,4 @@
-public class Divide {
+public class Divide implements IOperation {
     private double x;
     private double y;
 
