@@ -1,28 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd ">
-    <bean id="calc" class="Calculator">
-        <property name="plus" ref="plusOperation"/>
-        <property name="minus" ref="minusOperation"/>
-        <property name="multiply" ref="multiplyOperation"/>
-        <property name="divide" ref="divideOperation"/>
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:component="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+    <!-- говорит спрингу обрабатывать аннотации которые он знает -->
+    <context:annotation-config/>
+    <!-- говорит где искать классы с аннотациями -->
+    <context:component-scan base-package="beans"/>
+    <!--
+    <bean id="calc" class="beans.Calculator">
+        <property name="plus" ref="plus"/>
+        <property name="minus" ref="minus"/>
+        <property name="multiply" ref="multiply"/>
+        <property name="divide" ref="divide"/>
     </bean>
-    <bean id="plusOperation" class="Plus">
-        <property name="x" value="0"/>
-        <property name="y" value="0"/>
-    </bean>
-    <bean id="minusOperation" class="Minus">
-        <property name="x" value="0"/>
-        <property name="y" value="0"/>
-    </bean>
-    <bean id="multiplyOperation" class="Multiply">
-        <property name="x" value="0"/>
-        <property name="y" value="0"/>
-    </bean>
-    <bean id="divideOperation" class="Divide">
-        <property name="x" value="0"/>
-        <property name="y" value="0"/>
-    </bean>
-
+    <bean id="plusOperation" clabeans.PlusPlus" />
+    <bean id="multiplyOperation" clabeans.Multiplyiply" />
+    <bean id="divideOperation" clabeans.Dividevide" />
+-->
 </beans>
